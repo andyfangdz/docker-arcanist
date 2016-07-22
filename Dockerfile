@@ -2,7 +2,7 @@
 # Nasqueron - Arcanist image
 #
 
-FROM matriphe/alpine-php
+FROM php:alpine
 MAINTAINER Dezhi Fang <dezhifang@gatech.edu>
 
 #
