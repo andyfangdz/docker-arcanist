@@ -2,15 +2,15 @@
 # Nasqueron - Arcanist image
 #
 
-FROM nasqueron/php-cli
-MAINTAINER Sébastien Santoro aka Dereckson <dereckson+nasqueron-docker@espace-win.org>
+FROM matriphe/alpine-php
+MAINTAINER Dezhi Fang <dezhifang@gatech.edu>
 
 #
 # Prepare the container
 #
 
 RUN apt-get update && apt-get install -y \
-            mercurial subversion openssh-client locales \
+            openssh-client locales \
             --no-install-recommends && rm -r /var/lib/apt/lists/* && \
     sed -i -e 's/# en_US.UTF-8 UTF-8/en_US.UTF-8 UTF-8/' /etc/locale.gen && \
     echo 'LANG="en_US.UTF-8"' > /etc/default/locale && \
