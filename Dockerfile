@@ -23,8 +23,10 @@ RUN cd /opt && \
     wget https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash && \
     cd /home/app && \
     ln -s /opt/arcanist/bin/arc /usr/local/bin/arc && \
-    ln -s /opt/config/gitconfig /root/.gitconfig && \
-    ln -s /opt/config/arcrc /root/.arcrc
+    ln -s /opt/config/gitconfig /root/.gitconfig 
+   
+# && \
+#     ln -s /opt/config/arcrc /root/.arcrc
 
 COPY files /
 
